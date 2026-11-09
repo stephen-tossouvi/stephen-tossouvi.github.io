@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Stephen Tossouvi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+
+    :root {
+      --bg-dark: #2e3135;
+      --bg-darker: #1e2023;
+      --bg-alt: #34373c;
+      --mid-grey: #6e7278;
+      --card-bg: #3a3d42;
+      --light-grey: #b8b9b8;
+      --white: #d8d8d6;
+      --navy: #1F3A5F;
+      --navy-light: #2e5a8f;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--white);
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .cv {
+      display: flex;
+      max-width: 800px;
+      width: 100%;
+      background: var(--card-bg);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    /* ===== COLONNE DE GAUCHE ===== */
+    .sidebar {
+      width: 220px;
+      flex-shrink: 0;
+      background: var(--bg-darker);
+      color: var(--white);
+      padding: 30px 20px;
+    }
+
+    .sidebar h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 10px 0;
+      border-bottom: 1px solid var(--mid-grey);
+      padding-bottom: 5px;
+      color: var(--light-grey);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sidebar h3.not-first {
+      margin-top: 25px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      font-size: 0.85rem;
+    }
+
+    .sidebar li {
+      margin-bottom: 6px;
+      color: var(--light-grey);
+    }
+
+    /* ===== COLONNE DE DROITE ===== */
+    .main {
+      flex: 1;
+      padding: 25px 30px;
+    }
+
+    .main h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.9rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .summary {
+      color: var(--light-grey);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .main h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      color: var(--white);
+      border-bottom: 2px solid var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 24px 0 12px 0;
+      padding-bottom: 6px;
+    }
+
+    .main h2 i {
+      color: var(--navy-light);
+    }
+
+    .section-block {
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 4px;
+    }
+
+    .section-block.alt {
+      background: var(--bg-alt);
+    }
+
+    .entry {
+      margin-bottom: 10px;
+      border-left: 3px solid var(--navy);
+      padding-left: 12px;
+    }
+
+    .entry-title {
+      font-weight: bold;
+      font-size: 0.95rem;
+      color: var(--white);
+    }
+
+    .entry-sub {
+      color: var(--light-grey);
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .skill-icon {
+      text-align: center;
+      font-size: 1.6rem;
+      color: var(--light-grey);
+      width: 65px;
+    }
+
+    .skill-icon span.label {
+      display: block;
+      font-size: 0.65rem;
+      color: var(--mid-grey);
+      margin-top: 4px;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      gap: 3px;
+      margin-top: 5px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--mid-grey);
+    }
+
+    .dot.filled {
+      background: var(--navy-light);
+    }
+
+    @media print {
+      body { background: white; padding: 0; color: black; }
+      .cv { box-shadow: none; background: white; }
+      .sidebar { background: var(--navy) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .section-block.alt { background: #f0f1f2 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .main h1, .main h2, .entry-title { color: var(--navy) !important; }
+      .entry-sub { color: #555 !important; }
+      .entry { border-left-color: var(--navy) !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv">
+
+    <!-- ===== SIDEBAR ===== -->
+    <div class="sidebar">
+      <h3><i class="fa-solid fa-address-card"></i> Contact</h3>
+      <div class="contact-item"><i class="fa-solid fa-envelope"></i> sstephentossouvi@gmail.com</div>
+      <div class="contact-item"><i class="fa-solid fa-phone"></i> 07 49 92 86 08</div>
+
+      <h3 class="not-first"><i class="fa-solid fa-language"></i> Langues</h3>
+      <ul>
+        <li>Français — courant</li>
+        <li>Anglais — B2</li>
+      </ul>
+
+      <h3 class="not-first"><i class="fa-solid fa-heart"></i> Centres d'intérêt</h3>
+      <ul>
+        <li>Football</li>
+        <li>Cinéma</li>
+        <li>Communication</li>
+      </ul>
+    </div>
+
+    <!-- ===== MAIN ===== -->
+    <div class="main">
+      <h1>Stephen TOSSOUVI</h1>
+      <p class="summary">Étudiant en développement web et webdesign, curieux et motivé à l'idée d'apprendre de nouveaux outils pour enrichir mes compétences au contact d'une équipe.</p>
+
+      <h2><i class="fa-solid fa-graduation-cap"></i> Formation</h2>
+      <div class="section-block">
+        <div class="entry">
+          <div class="entry-title">Licence professionnelle — Intégration et webdesign</div>
+          <div class="entry-sub">2026 – en cours · EISINE, Université de Reims Champagne-Ardenne</div>
+        </div>
+      </div>
+      <div class="section-block alt">
+        <div class="entry">
+          <div class="entry-title">Licence Gestion et informatique</div>
+          <div class="entry-sub">2024 – 2026 · IUT de Parakou, Bénin</div>
+        </div>
+      </div>
+      <div class="section-block">
+        <div class="entry">
+          <div class="entry-title">Baccalauréat série C — Mention Bien (15,95/20)</div>
+          <div class="entry-sub">2023 – 2024 · Lycée catholique de Comé, Bénin</div>
+        </div>
+      </div>
+
+      <h2><i class="fa-solid fa-code"></i> Compétences</h2>
+      <div class="skills-row">
+        <div class="skill-icon">
+          <i class="devicon-html5-plain"></i>
+          <span class="label">HTML</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+          <i class="devicon-css3-plain"></i>
+          <span class="label">CSS</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+          <i class="devicon-javascript-plain"></i>
+          <span class="label">JS</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+          <i class="devicon-figma-plain"></i>
+          <span class="label">Figma</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+          <i class="devicon-mysql-plain"></i>
+          <span class="label">MySQL</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+          <i class="devicon-laravel-plain"></i>
+          <span class="label">Laravel</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+  <i class="devicon-php-plain"></i>
+  <span class="label">PHP</span>
+  <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+<div class="skill-icon">
+  <i class="devicon-illustrator-plain"></i>
+  <span class="label">Illustrator</span>
+  <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+<div class="skill-icon">
+  <i class="fa-solid fa-users"></i>
+  <span class="label">Média</span>
+  <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+<div class="skill-icon">
+  <i class="fa-solid fa-list-check"></i>
+  <span class="label">Managment</span>
+  <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+</div>
+      </div>
+
+      <h2><i class="fa-solid fa-diagram-project"></i> Projets</h2>
+      <div class="section-block">
+        <div class="entry">
+          <div class="entry-title">Site de services à domicile</div>
+          <div class="entry-sub">Plateforme de mise en relation, recherche par proximité · Figma, HTML, CSS, JS</div>
+        </div>
+      </div>
+      <div class="section-block alt">
+        <div class="entry">
+          <div class="entry-title">Application mobile météo</div>
+          <div class="entry-sub">Interface développée en binôme, données via API · Flutter, Dart</div>
+        </div>
+      </div>
+      <div class="section-block">
+        <div class="entry">
+          <div class="entry-title">Site de réservation de bus</div>
+          <div class="entry-sub">Réservation de billets en ligne, projet de groupe · HTML, CSS, JS, PHP, MySQL</div>
+        </div>
+      </div>
+
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

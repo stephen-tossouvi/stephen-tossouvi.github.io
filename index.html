@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+    <title>Portofolio-Stephen TOSSOUVI</title>
+</head>
+<body>
+  <canvas id="stars"></canvas>
+    <header>
+  <div class="logo">&lt;Portfolio/&gt;</div>
+  <button class="hamburger" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <ul class="menu" id="menu">
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#formation">Formation</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+    </header>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('menu-open');
+  }
+</script>
+    <section class="hero">
+        <img src="photo.jpg" alt="Photo" class="avatar">
+        <h1>Stephen TOSSOUVI</h1>
+        <P>Etudiant en intégration web et webdesign</P>
+        <div class="hero-buttons">
+            <a href="#competences" class="btn btn-primary">Me découvrir</a>
+            <a href="MonCV.pdf" class="btn btn-outline">Télécharger mon CV</a>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2>Compétences</h2>
+        <div class="skill-block">
+          <h3>Design & développement</h3>
+          <div class="skills-grid">
+            <div class="skill-icon"><i class="devicon-figma-plain"></i></div>
+            <div class="skill-icon"><i class="devicon-photoshop-plain"></i></div>
+            <div class="skill-icon"><i class="devicon-canva-plain"></i></div>
+            <div class="skill-icon"><i class="devicon-vscode-plain"></i></div>
+            <div class="skill-icon"><i class="devicon-github-original"></i></div>
+          </div>
+          </div>
+        </div>
+
+        <div class="skill-block">
+            <h3>Front</h3>
+            <div class="skills-grid">
+                <div class="skill-icon"><i class="devicon-html5-plain"></i></div>
+                <div class="skill-icon"><i class="devicon-css3-plain"></i></div>
+                <div class="skill-icon"><i class="devicon-javascript-plain"></i></div>
+            </div>
+        </div>
+
+        <div class="skill-block">
+        <h3>Back</h3>
+        <div class="skills-grid">
+                <div class="skill-icon"><i class="devicon-php-plain"></i></div>
+                <div class="skill-icon"><i class="devicon-mysql-plain"></i></div>
+                <div class="skill-icon"><i class="devicon-laravel-plain"></i></div>
+            </div>
+        </div>
+
+        <div class="skill-block">
+  <h3>Mobile</h3>
+  <div class="skills-grid">
+    <div class="skill-icon"><i class="devicon-flutter-plain"></i></div>
+    <div class="skill-icon"><i class="devicon-dart-plain"></i></div>
+  </div>
+</div>
+    </section>
+
+    <section id="formation">
+  <h2>Découvrez ma formation</h2>
+
+  <div class="formation-card">
+    <h3>Licence professionnelle — Intégration et webdesign</h3>
+    <span class="badge">2026 – en cours</span>
+    <p>EISINE, Université de Reims Champagne-Ardenne</p>
+    <p class="skills-title">Savoirs acquis grâce à cette formation</p>
+    <ul class="skills-list">
+      <li>Intégration web avancée (HTML, CSS, JavaScript)</li>
+      <li>Fondamentaux du dévéloppement</li>
+      <li>Conception d'interfaces en Figma, UX/UI</li>
+      <li>Développement avec des CMS(WordPress) et framework(Laravel)</li>
+      <li>Responsive design</li>
+      <li>Référencement et bonnes pratiques web</li>
+      <li>Communication digitale et rédaction web</li>
+      <li>Gestion de projet web</li>
+    </ul>
+  </div>
+
+  <div class="formation-card">
+    <h3>Licence Gestion et informatique</h3>
+    <span class="badge">2024 – 2026</span>
+    <p>IUT de Parakou, Bénin</p>
+    <p class="skills-title">Savoirs acquis grâce à cette formation</p>
+    <ul class="skills-list">
+      <li>Gestion de bases de données (Access, MySQL)</li>
+      <li>Notions de gestion d'entreprise et de projet</li>
+      <li>Bureautique (Word, Excel)</li>
+      <li>Travail en equipe sur projet</li>
+      <li>Analyse de données</li>
+      <li>Algorithmique et logique de programmation</li>
+      <li>Optimisation</li>
+      <li>Gestion de ressources humaines</li>
+    </ul>
+  </div>
+
+  <div class="formation-card">
+    <h3>Baccalauréat série C</h3>
+    <span class="badge">Mention Bien</span>
+    <span class="badge">2023 – 2024</span>
+    <p>Lycée catholique de Comé, Bénin</p>
+    <p class="skills-title">Savoirs acquis grâce à cette formation</p>
+    <ul class="skills-list">
+      <li>Bases en mathématiques (algèbre,géométrie,analyse)</li>
+      <li>Sciences physiques et de la Chimie</li>
+      <li>Raisonnement critique</li>
+      <li>Méthode de travail et rigueur scientifique</li>
+      <li>Littérature argumentée</li>
+    </ul>
+  </div>
+
+</section>
+
+    
+    <!-- ===== PROJETS ===== -->
+<section id="projets">
+  <h2>Découvrez mes projets</h2>
+
+  <div class="category-card">
+    <span class="category-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+    <span class="category-label">Projets scolaires</span>
+    <a href="projets-scolaires.html" class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+
+  <div class="category-card">
+    <span class="category-icon"><i class="fa-solid fa-laptop-code"></i></span>
+    <span class="category-label">Projets personnels</span>
+    <a href="projets-personnels.html" class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+
+  <div class="category-card">
+    <span class="category-icon"><i class="fa-solid fa-hourglass-half"></i></span>
+    <span class="category-label">Projets à venir</span>
+    <a href="projets-avenir.html" class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+
+</section>
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-icons">
+    <a href="mailto:sstephentossouvi@gmail.com" class="icon-circle"><i class="fa-solid fa-envelope"></i></a>
+    <a href="tel:0749928608" class="icon-circle"><i class="fa-solid fa-phone"></i></a>
+    <a href="#" class="icon-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+  <p>sstephentossouvi@gmail.com</p>
+  <p>07 49 92 86 08 — Stephen Tossouvi</p>
+</section>
+
+
+<footer>
+  <div class="logo">&lt;Portfolio/&gt;</div>
+  <p class="footer-tagline">Développeur web & webdesigner</p>
+
+  <ul class="footer-links">
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#formation">Formation</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <p class="copyright">© 2026 Stephen Tossouvi. Tous droits réservés.</p>
+</footer>
+    <script>
+  const canvas = document.getElementById('stars');
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const stars = [];
+  for (let i = 0; i < 100; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 1.5,
+      alpha: Math.random(),
+      speed: Math.random() * 0.02
+    });
+  }
+
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(star => {
+      star.alpha += star.speed;
+      if (star.alpha > 1 || star.alpha < 0) star.speed *= -1;
+
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(216, 216, 214, ${star.alpha})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(drawStars);
+  }
+
+  drawStars();
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projet personnels - Stephen TOSSOUVI</title>
+</head>
+<body>
+    <section id="projets">
+  <h2>Projets personnels</h2>
+
+  <div class="accordion-item">
+    <button class="accordion-header" onclick="toggleProject(this)">
+      Site de services à domicile
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content">
+      <p>Plateforme de mise en relation entre demandeurs et prestataires, avec recherche par proximité, réservation et profils.</p>
+      <span class="tag">Figma · HTML · CSS · JS</span>
+    </div>
+  </div>
+
+  <a href="index.html#projets" class="btn btn-outline" style="margin-top:20px;display:inline-block;">← Retour aux projets</a>
+</section>
+
+<script>
+  function toggleProject(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.maxHeight;
+    content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+    button.classList.toggle("active");
+  }
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projets à venir - Stephen TOSSOUVI</title>
+</head>
+<body>
+    <section id="projets">
+  <h2>Projets à venir</h2>
+
+  <div class="accordion-item">
+    <button class="accordion-header" onclick="toggleProject(this)">
+      Site de commande d'articles personnalisés
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+    <div class="accordion-content">
+      <p>Projet en réflexion, pas encore commencé.</p>
+      <span class="tag">À définir</span>
+    </div>
+  </div>
+
+  <a href="index.html#projets" class="btn btn-outline" style="margin-top:20px;display:inline-block;">← Retour aux projets</a>
+</section>
+
+<script>
+  function toggleProject(button) {
+    const content = button.nextElementSibling;
+    const isOpen = content.style.maxHeight;
+    content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+    button.classList.toggle("active");
+  }
+</script>
+</body>
+</html>
