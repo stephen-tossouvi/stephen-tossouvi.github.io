@@ -46,7 +46,6 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
 
-    /* ===== COLONNE DE GAUCHE ===== */
     .sidebar {
       width: 220px;
       flex-shrink: 0;
@@ -90,7 +89,6 @@
       color: var(--light-grey);
     }
 
-    /* ===== COLONNE DE DROITE ===== */
     .main {
       flex: 1;
       padding: 25px 30px;
@@ -194,13 +192,24 @@
     }
 
     @media print {
+      html, body { width: 190mm; }
       body { background: white; padding: 0; color: black; }
-      .cv { box-shadow: none; background: white; }
-      .sidebar { background: var(--navy) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .cv { box-shadow: none; background: white; max-width: none; width: 190mm; min-height: 272mm; }
+      .sidebar { background: var(--navy) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; padding: 24px 16px; }
       .section-block.alt { background: #f0f1f2 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       .main h1, .main h2, .entry-title { color: var(--navy) !important; }
       .entry-sub { color: #555 !important; }
+      .summary { color: #444 !important; }
       .entry { border-left-color: var(--navy) !important; }
+      .main { padding: 22px 28px; }
+      .main h1 { font-size: 1.8rem; margin-bottom: 8px; }
+      .summary { margin-bottom: 14px; font-size: 0.88rem; line-height: 1.5; }
+      .main h2 { margin: 20px 0 10px 0; padding-bottom: 5px; }
+      .section-block { padding: 9px 14px; margin-bottom: 4px; }
+      .entry { margin-bottom: 8px; }
+      .skills-row { gap: 14px; margin-top: 8px; }
+      .skill-icon { width: 64px; }
+      .cv, .section-block, .skill-icon { break-inside: avoid; page-break-inside: avoid; }
     }
   </style>
 </head>
@@ -208,7 +217,6 @@
 
   <div class="cv">
 
-    <!-- ===== SIDEBAR ===== -->
     <div class="sidebar">
       <h3><i class="fa-solid fa-address-card"></i> Contact</h3>
       <div class="contact-item"><i class="fa-solid fa-envelope"></i> sstephentossouvi@gmail.com</div>
@@ -222,13 +230,13 @@
 
       <h3 class="not-first"><i class="fa-solid fa-heart"></i> Centres d'intérêt</h3>
       <ul>
-        <li>Football</li>
-        <li>Cinéma</li>
+        <li>Sport</li>
         <li>Communication</li>
+        <li>Documentaires</li>
+        <li>Entrepreneuriat</li>
       </ul>
     </div>
 
-    <!-- ===== MAIN ===== -->
     <div class="main">
       <h1>Stephen TOSSOUVI</h1>
       <p class="summary">Étudiant en développement web et webdesign, curieux et motivé à l'idée d'apprendre de nouveaux outils pour enrichir mes compétences au contact d'une équipe.</p>
@@ -286,25 +294,33 @@
           <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
         </div>
         <div class="skill-icon">
-  <i class="devicon-php-plain"></i>
-  <span class="label">PHP</span>
-  <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
-</div>
-<div class="skill-icon">
-  <i class="devicon-illustrator-plain"></i>
-  <span class="label">Illustrator</span>
-  <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-</div>
-<div class="skill-icon">
-  <i class="fa-solid fa-users"></i>
-  <span class="label">Média</span>
-  <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
-</div>
-<div class="skill-icon">
-  <i class="fa-solid fa-list-check"></i>
-  <span class="label">Managment</span>
-  <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
-</div>
+          <i class="devicon-php-plain"></i>
+          <span class="label">PHP</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+          <i class="devicon-illustrator-plain"></i>
+          <span class="label">Illustrator</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+          <i class="fa-solid fa-users"></i>
+          <span class="label">Média</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+        <div class="skill-icon">
+          <i class="fa-solid fa-list-check"></i>
+          <span class="label">Managment</span>
+          <div class="dots"><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot"></div><div class="dot"></div></div>
+        </div>
+      </div>
+
+      <h2><i class="fa-solid fa-certificate"></i> Certificats</h2>
+      <div class="section-block alt">
+        <div class="entry">
+          <div class="entry-title">Statut National Étudiant-Entrepreneur (SNEE)</div>
+          <div class="entry-sub">Novembre 2026 · PEPITE Champagne-Ardenne</div>
+        </div>
       </div>
 
       <h2><i class="fa-solid fa-diagram-project"></i> Projets</h2>
@@ -317,17 +333,8 @@
       <div class="section-block alt">
         <div class="entry">
           <div class="entry-title">Application mobile météo</div>
-          <div class="entry-sub">Interface développée en binôme, données via API · Flutter, Dart</div>
+          <div class="entry-sub">Interface développée en groupe, données via API · Flutter, Dart</div>
         </div>
-      </div>
-      <div class="section-block">
-        <div class="entry">
-          <div class="entry-title">Site de réservation de bus</div>
-          <div class="entry-sub">Réservation de billets en ligne, projet de groupe · HTML, CSS, JS, PHP, MySQL</div>
-        </div>
-      </div>
-
-      </div>
       </div>
     </div>
 
