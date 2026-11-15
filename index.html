@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="site.js" defer></script>
   
     <title>Portofolio - Stephen TOSSOUVI</title>
 </head>
 <body>
   <canvas id="stars"></canvas>
+  <div class="site-controls" aria-label="Options d'affichage">
+    <button class="site-control" type="button" data-theme-toggle aria-label="Activer le thème clair" title="Activer le thème clair" aria-pressed="false">
+      <i class="fa-solid fa-sun" aria-hidden="true"></i>
+    </button>
+    <button class="site-control" type="button" data-back-to-top aria-label="Retour en haut" title="Retour en haut" hidden>
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+  </div>
     <header>
   <div class="logo">&lt;Portfolio/&gt;</div>
   <button class="hamburger" onclick="toggleMenu()">
@@ -30,7 +40,7 @@
   }
 </script>
     <section class="hero">
-        <img src="photo.jpg" alt="Photo" class="avatar">
+        <img src="WhatsApp Image 2026-11-14 at 20.53.49.jpeg" alt="Photo" class="avatar">
         <h1>Stephen TOSSOUVI</h1>
         <P>Etudiant en intégration web et webdesign</P>
         <div class="hero-buttons">
@@ -209,7 +219,8 @@
 
       ctx.beginPath();
       ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(216, 216, 214, ${star.alpha})`;
+      const starColor = document.documentElement.dataset.theme === 'light' ? '80, 105, 135' : '216, 216, 214';
+      ctx.fillStyle = `rgba(${starColor}, ${star.alpha})`;
       ctx.fill();
     });
     requestAnimationFrame(drawStars);
@@ -222,6 +233,5 @@
     canvas.height = window.innerHeight;
   });
 </script>
-    <button id="backToTop" title="Remonter en haut">↑</button>
 </body>
 </html>
