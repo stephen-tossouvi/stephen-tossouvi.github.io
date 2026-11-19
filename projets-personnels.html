@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="site.js" defer></script>
-    <title>Projet personnels - Stephen TOSSOUVI</title>
+    <title>Projets personnels - Stephen TOSSOUVI</title>
 </head>
 <body>
     <div class="site-controls" aria-label="Options d'affichage">
@@ -19,34 +19,40 @@
       </button>
     </div>
     <section id="projets">
-  <h2>Projets personnels</h2>
+      <h2>Projets personnels</h2>
 
-  <div class="accordion-item">
-    <button class="accordion-header" onclick="toggleProject(this)">
-      Site de services à domicile
-      <i class="fa-solid fa-chevron-down"></i>
-    </button>
-    <div class="accordion-content">
-      <p>Plateforme de mise en relation entre demandeurs et prestataires, avec recherche par proximité, réservation et profils.</p>
-      <span class="tag">Figma · HTML · CSS · JS</span>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleProject(this)">
+          Boutique en ligne de cadeaux personnalisés
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <p>Site e-commerce permettant de découvrir et de commander des cadeaux personnalisés.</p>
+          <span class="tag">E-commerce · Personnalisation · Commande</span>
+        </div>
+      </div>
 
-  <a href="index.html#projets" class="btn btn-outline" style="margin-top:20px;display:inline-block;">← Retour aux projets</a>
-</section>
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleProject(this)">
+          Réservation de cours particuliers à domicile
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <p>Plateforme permettant de trouver un professeur et de réserver des cours particuliers à domicile.</p>
+          <span class="tag">Éducation · Réservation · Cours à domicile</span>
+        </div>
+      </div>
 
-<script>
-  function toggleProject(button) {
-    const content = button.nextElementSibling;
-    const isOpen = content.style.maxHeight;
-    content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
-    button.classList.toggle("active");
-  }
-</script>
+      <a href="index.html#projets" class="btn btn-outline" style="margin-top:20px;display:inline-block;">← Retour aux projets</a>
+    </section>
+
+    <script>
+      function toggleProject(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+        content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+        button.classList.toggle("active");
+      }
+    </script>
 </body>
 </html>
-
-
-
-
-

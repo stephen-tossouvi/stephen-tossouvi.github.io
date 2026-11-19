@@ -19,40 +19,40 @@
       </button>
     </div>
     <section id="projets">
-  <h2>Projets scolaires</h2>
+      <h2>Projets scolaires</h2>
 
-  <div class="accordion-item">
-    <button class="accordion-header" onclick="toggleProject(this)">
-      Application mobile météo
-      <i class="fa-solid fa-chevron-down"></i>
-    </button>
-    <div class="accordion-content">
-      <p>Interface développée en groupe, affichage de données météo via une API.</p>
-      <span class="tag">Flutter · Dart</span>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleProject(this)">
+          Cahier des charges — gestion des inscriptions académiques
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <p>Rédaction du cahier des charges d’un système de validation des inscriptions académiques pour l’Université de Parakou.</p>
+          <span class="tag">Analyse des besoins · Gestion de projet</span>
+        </div>
+      </div>
 
-  <div class="accordion-item">
-    <button class="accordion-header" onclick="toggleProject(this)">
-      Cahier des charges
-      <i class="fa-solid fa-chevron-down"></i>
-    </button>
-    <div class="accordion-content">
-      <p>Système de validation des inscriptions académiques, Université de Parakou.</p>
-      <span class="tag">Gestion de projet</span>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleProject(this)">
+          Application mobile météo — exercice en binôme
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <p>Exercice réalisé en binôme : création d’une interface mobile qui récupère et affiche des données météorologiques à partir d’une API.</p>
+          <span class="tag">Flutter · Dart · API</span>
+        </div>
+      </div>
 
-  <a href="index.html#projets" class="btn btn-outline" style="margin-top:20px;display:inline-block;">← Retour aux projets</a>
-</section>
+      <a href="index.html#projets" class="btn btn-outline" style="margin-top:20px;display:inline-block;">← Retour aux projets</a>
+    </section>
 
-<script>
-  function toggleProject(button) {
-    const content = button.nextElementSibling;
-    const isOpen = content.style.maxHeight;
-    content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
-    button.classList.toggle("active");
-  }
-</script>
+    <script>
+      function toggleProject(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+        content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+        button.classList.toggle("active");
+      }
+    </script>
 </body>
 </html>
