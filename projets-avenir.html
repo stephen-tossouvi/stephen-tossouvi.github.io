@@ -19,29 +19,40 @@
       </button>
     </div>
     <section id="projets">
-  <h2>Projets à venir</h2>
+      <h2>Projets à venir</h2>
 
-  <div class="accordion-item">
-    <button class="accordion-header" onclick="toggleProject(this)">
-      Site de commande d'articles personnalisés
-      <i class="fa-solid fa-chevron-down"></i>
-    </button>
-    <div class="accordion-content">
-      <p>Projet en réflexion, pas encore commencé.</p>
-      <span class="tag">À définir</span>
-    </div>
-  </div>
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleProject(this)">
+          Plateforme de mise en relation entre prestataires et fournisseurs
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <p>Projet envisagé : faciliter la recherche et la mise en relation de prestataires avec des fournisseurs situés à proximité.</p>
+          <span class="tag">Mise en relation · Recherche par proximité</span>
+        </div>
+      </div>
 
-  <a href="index.html#projets" class="btn btn-outline" style="margin-top:20px;display:inline-block;">← Retour aux projets</a>
-</section>
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleProject(this)">
+          Plateforme de valorisation des jeunes talents du football
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <p>Projet envisagé avec des clubs professionnels pour faire connaître des joueurs locaux à fort potentiel et faciliter leur repérage.</p>
+          <span class="tag">Football · Détection de talents · Clubs professionnels</span>
+        </div>
+      </div>
 
-<script>
-  function toggleProject(button) {
-    const content = button.nextElementSibling;
-    const isOpen = content.style.maxHeight;
-    content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
-    button.classList.toggle("active");
-  }
-</script>
+      <a href="index.html#projets" class="btn btn-outline" style="margin-top:20px;display:inline-block;">← Retour aux projets</a>
+    </section>
+
+    <script>
+      function toggleProject(button) {
+        const content = button.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+        content.style.maxHeight = isOpen ? null : content.scrollHeight + "px";
+        button.classList.toggle("active");
+      }
+    </script>
 </body>
 </html>
